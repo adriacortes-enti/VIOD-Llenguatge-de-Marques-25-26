@@ -1,4 +1,5 @@
 import Player from './Player.js';
+import Stars from './Stars.js';
 
 const config = {
     type: Phaser.AUTO,
@@ -37,11 +38,6 @@ function preload ()
     );
 }
 
-function collectStar (player, star)
-{
-    star.disableBody(true, true);
-}
-
 // Inicialitza els elements de joc
 function create ()
 {
@@ -68,26 +64,26 @@ function create ()
     player.setCollideWorldBounds(true); */
 
     // Afegim estrelles
-    stars = this.physics.add.group({
+    stars = new Stars(this);
+    // Ho passem a Stars.js
+    /*stars = this.physics.add.group({
         key: 'star',
         repeat: 11,
         setXY: { x: 12, y: 0, stepX: 70 }
     });
 
     stars.children.iterate(function (child) {
-
         child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
-
-    });
+    }); */
 
     // 2. Configurem animacions
     // --
 
-    // 3. Configurem les colissions
-    this.physics.add.collider(player.body, platforms);
-    this.physics.add.collider(stars, platforms);
+    // 3. Configurem les col·lissions (amb els arcadePhysics!)
+    this.physics.add.collider(player.physicsSprite, platforms);
+    this.physics.add.collider(stars.group, platforms);
 
-    this.physics.add.overlap(player, stars, collectStar, null, this);
+    this.physics.add.overlap(player.physicsSprite, stars.group, stars.collectStar, null, this);
 
     // 4. Altres configuracions
 
@@ -98,6 +94,6 @@ function create ()
 function update()
 {
     player.update();
-    // stars.update();
+    stars.update();
     // bombs.update();
 }
