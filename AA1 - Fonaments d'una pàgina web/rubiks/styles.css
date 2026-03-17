@@ -1,36 +1,104 @@
-body {
-    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+/* Exemple */
+/* selection {
+    propietat: valor;
+} */
+
+/* Reset bàsic */
+/* Més informació: https://vocal.media/01/universal-and-type-selectors-the-essential-tools-for-styling-your-web-pages */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav {
-    border: solid;
-    border-color: rgb(0, 0, 255);
+/* 
+== abans ==
+- box-sizing
+
+== llista de propietats ==
+- font-family
+- font-size: 1.3rem;
+
+- unitats: px, rem, %, vh, vw
+(
+    px: píxels, 
+    rem: root element font size, 
+    %: percentatge, 
+    vh: viewport height, 
+    vw: viewport width
+)
+
+- background-color
+- color
+
+- text-align
+
+- width
+- height
+
+- padding
+- border
+- margin
+
+*/
+
+/* Cos general */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: rgb(191, 151, 64);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Contingut principal */
+main {
+  width: 80%;
+  margin: 2rem auto;
 }
 
 aside {
-    border: solid;
-    border-color: green;
+  background-color: rgb(245, 215, 150);
+  margin-bottom: 2vh;
+
+  padding: 2rem;
+  font-style: italic;
 }
 
-section {
-    border: solid;
-    border-color: aqua;
-    margin-bottom:20px;
-    width: 80%;
-    margin: 2rem auto;
-    /* px, em, rem */
+section header {
+  background-color: rgb(124, 85, 0);
+  border-radius: 14px;
 }
 
-article {
-    border: solid;
-    border-color: red;
-}
-
-article p {
-    background-color: blanchedalmond;
-}
-
+/* Footer */
 footer {
-    border: solid;
-    border-color: brown;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #222;
+  color: white;
+
+  padding: 2rem;
+}
+
+/* Articles */
+article {
+  background-color: white;
+  padding: 1.5rem;
+
+  /* marge superior i inferior */
+  margin-block: 2rem; 
+  
+  /* opcional */
+  border-radius: 8px;
+}
+
+/* Títols */
+h2 {
+  margin-bottom: 1rem;
 }
