@@ -42,3 +42,22 @@ Reorganitza el codi de l'exercici 2 per a que el projecte sigui fàcil de manten
 - Utilitza main.js com a punt d’entrada del joc, amb la configuració (config) i la creació de l’escena.
 - Defineix els elements de joc com a atributs de l'escena i gestiona la creació d'objectes i les seves col·lisions des del create().
 - Importa les classes amb import i utilitza-les dins de create() i update().
+
+# Exercici 4 - TODO
+
+# Exercici 5 - Arkanoid
+Desenvolupa una versió bàsica del clàssic Arkanoid i personalitza-la al teu gust.
+- (Player.js) Utilitza la classe Rectangle per a crear al Player. S'ha de poder moure horitzontalment mitjançant un cursor.
+- (Blocks.js) Utilitza la classe Rectangle i l'element de grup per a crear l'agrupació física de blocs. S'ha de poder jugar amb una agrupació de 12 columnes i 6 files.
+- (Ball.js) Utilitza la classe Circle per a crear la pilota. Aquesta ha de col·lisionar amb el Player, amb l'agrupació de Blocks i amb els límits del canvas.
+
+- La pilota ha de començar aturada damunt del jugador i iniciar-se amb la tecla espai.
+- Quan no quedin blocs, el joc mostra un missatge de victòria.
+- Quan la pilota cau per sota del canvas, mostra un missatge de derrota.
+
+Documentació interessant
+https://docs.phaser.io/api-documentation/class/geom-circle
+https://docs.phaser.io/api-documentation/class/geom-rectangle
+
+Imatge de referència:
+https://tn.com.ar/resizer/v2/retrogames-volve-a-jugar-al-arkanoid-FOHSVTEURG47U3BY2AUCVXGBMI.jpg?auth=3fe579f6121294d154f5d7ab8b096d8b59a999af8c0a69d557e4e4cfad0cc348&width=767
