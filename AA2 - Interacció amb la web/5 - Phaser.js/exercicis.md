@@ -46,7 +46,7 @@ Reorganitza el codi de l'exercici 2 per a que el projecte sigui fàcil de manten
 # Exercici 4 - TODO (afegir vides al tutorial)
 
 # Exercici 5 - Bowser
-Desenvolupa una versió bàsica del minijoc Danger Bob-omb Danger! (New Super Mario Bros., DS).
+Desenvolupa una versió bàsica del minijoc _Danger Bob-omb Danger!_ (New Super Mario Bros., DS).
 [![Bowser gameplay](https://img.youtube.com/vi/-zx0z5XUPcg/0.jpg)](https://youtu.be/-zx0z5XUPcg)
 
 - (Player.js) S'ha de poder desplaçar amb el ratolí.

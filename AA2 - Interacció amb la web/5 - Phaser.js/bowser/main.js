@@ -8,7 +8,7 @@ const config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 300 }, // TODO: definir gravetat 0
+            gravity: { y: 0 }, // TODO: definir gravetat 0
             debug: false
         }
     },
