@@ -2,7 +2,7 @@ export default class Player {
     constructor(scene, x, y) {
         this.scene = scene;
 
-        this.create();
+        this.create(x,y);
     }
 
     create(x,y) {

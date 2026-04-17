@@ -8,7 +8,7 @@ const config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 0 }, // TODO: definir gravetat 0
+            gravity: { y: 0 },
             debug: false
         }
     },
@@ -59,5 +59,5 @@ function create ()
 // Lògica de joc. S'executa a cada frame
 function update()
 {
-    // TODO
+    bombs.update();
 }
