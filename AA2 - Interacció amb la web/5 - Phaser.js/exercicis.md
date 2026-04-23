@@ -104,7 +104,8 @@ this.scene.time.addEvent({
 ```
 
 ## Funcions per a Player.js
-TODO: en construcció
+
+Sistema d'arrossegament
 ```js
 // Defineix que el jugador es pot arrossegar amb el ratoli
 // useHandCursor canvia el cursor del ratolí
@@ -113,13 +114,29 @@ this.physicsSprite.setInteractive({ useHandCursor: true });
 this.scene.input.setDraggable(this.physicsSprite);
 ```
 
-```js
-this.physicsSprite.anims.play('turn');
-```
-
 Iniciar i acabar arrossegament
 ```js
-this.input.on('dragstart', listener)
-this.input.on('drag', listener)
-this.input.on('dragend', listener)
+this.input.on('dragstart', listener);
+
+// https://docs.phaser.io/api-documentation/event/input-events#drag
+// Drag: pointer, gameObject, dragX, dragY
+this.input.on('drag', 
+    function (pointer, gameObject, dragX, dragY) {
+        if (gameObject == )
+    }
+);
+this.input.on('dragend', listener);
+```
+
+Animacions
+```js
+// Genera l'animació idle a partir de la imatge bombPlayer
+this.scene.anims.create({
+    key: 'idle',
+    frames: this.scene.anims.generateFrameNumbers('bombPlayer', { start: 0, end: 1 }),
+    frameRate: 10,
+});
+
+// Reprodueix l'animació 'idle'
+this.physicsSprite.anims.play('idle');
 ```

@@ -27,6 +27,16 @@ export default class Player {
         // TODO
 
         // 3. Configuració de la interacció de l'usuari
+        // https://docs.phaser.io/api-documentation/event/input-events#drag
+        // Drag: pointer, gameObject, dragX, dragY
+        this.scene.input.on('drag', 
+            function (pointer, gameObject, dragX, dragY) {
+                if (gameObject === this.physicsSprite) {
+                    this.physicsSprite.x = dragX;
+                    this.physicsSprite.y = dragY;
+                }
+            }
+        );
 
     }
 

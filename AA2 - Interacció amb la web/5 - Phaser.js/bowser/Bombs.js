@@ -21,13 +21,15 @@ export default class Bombs {
         // Creem un pool de bombes reutilitzables
         this.physicSpritesGroup = this.scene.physics.add.group({
             key: 'bomb',
-            repeat: 39, // 1 + 39 bombes = 40
+            repeat: 59, // 1 + 59 bombes = 60
             setXY: { x: 0, y: 0 }
         });
 
-        this.physicSpritesGroup.children.iterate(function (bomb) {
-            bomb.disableBody(true, true);
-        });   
+        this.physicSpritesGroup.children.iterate(
+            function (bomb) {
+                bomb.disableBody(true, true);
+            }
+        );   
         
         // Executa this.spawnBomb() cada 150 ms
         this.scene.time.addEvent({
@@ -41,7 +43,7 @@ export default class Bombs {
     update() {
         this.physicSpritesGroup.children.iterate(function (bomb) {
 
-            if (bomb.y > 300) {
+            if (bomb.y > 600) {
                 bomb.disableBody(true, true);
             }
 

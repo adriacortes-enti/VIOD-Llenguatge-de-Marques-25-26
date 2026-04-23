@@ -1,10 +1,13 @@
 import Player from './Player.js';
 import Bombs from './Bombs.js';
 
+const CANVAS_WIDTH = 800;
+const CANVAS_HEIGHT = 600;
+
 const config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: CANVAS_WIDTH,
+    height: CANVAS_HEIGHT,
     physics: {
         default: 'arcade',
         arcade: {
@@ -34,7 +37,7 @@ var scoreText;
 // Es carreguen recursos externs (imatges, sons, etc.)
 function preload ()
 {
-    this.load.image('background', 'https://placehold.co/800x600');
+    this.load.image('background', 'assets/background.png');
     this.load.image('bomb', 'assets/bomb.png');
     this.load.spritesheet('dude', 
         'assets/dude.png',
@@ -46,7 +49,11 @@ function preload ()
 function create ()
 {
     // 1. Afegim elements a l'escena
-    this.add.image(400, 300, 'background');
+    var backgroundImg = this.add.image(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 'background');
+    
+    // https://docs.phaser.io/api-documentation/namespace/gameobjects-components-size#displayheight
+    backgroundImg.displayWidth = CANVAS_WIDTH;
+    backgroundImg.displayHeight = CANVAS_HEIGHT;
 
     player = new Player(this, 100, 450);
     bombs = new Bombs(this);
