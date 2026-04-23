@@ -126,7 +126,7 @@ this.scene.input.on('dragstart', (pointer, gameObject) => {
 // Atrapa els frames mentre s'arrossega qualsevol gameObject
 this.scene.input.on('drag', 
     (pointer, gameObject, dragX, dragY) => {
-        // Assigna posició de l'sprite a la nova posició del ratolí
+        // Assigna posició del ratolí a la nova posició de l'sprite
         this.physicsSprite.x = dragX;
         this.physicsSprite.y = dragY;
     }
