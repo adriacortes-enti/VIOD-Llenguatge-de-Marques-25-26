@@ -140,3 +140,15 @@ this.scene.anims.create({
 // Reprodueix l'animació 'idle'
 this.physicsSprite.anims.play('idle');
 ```
+
+## Funcions per a main.js
+Col·lisions
+```js
+// Defineix que cada vegada que se sobreposin el physicSprite del player i el grup de bombes, es cridarà la funció hitBomb
+this.physics.add.collider(player.physicsSprite, bombs.physicSpritesGroup, hitBomb, null, this);
+
+function hitBomb (player, bomb)
+{
+    // codi de la col·lisió
+}
+```
