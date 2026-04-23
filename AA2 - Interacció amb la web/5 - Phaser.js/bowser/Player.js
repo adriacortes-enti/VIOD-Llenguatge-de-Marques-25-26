@@ -30,7 +30,7 @@ export default class Player {
         // https://docs.phaser.io/api-documentation/event/input-events#drag
         // Drag: pointer, gameObject, dragX, dragY
         this.scene.input.on('drag', 
-            (pointer, gameObject, dragX, dragY) => {
+            function (pointer, gameObject, dragX, dragY) {
                 this.physicsSprite.x = dragX;
                 this.physicsSprite.y = dragY;
             }
