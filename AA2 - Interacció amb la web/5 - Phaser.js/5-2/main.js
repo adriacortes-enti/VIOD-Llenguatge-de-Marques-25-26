@@ -26,13 +26,13 @@ var platforms;
 var stars;
 var score = 0;
 var scoreText;
-var starSound;
+var collectStarSound;
 
 // COL·LISIONS
 function collectStar (player, star)
 {
-    // Reproduir audio
-    starSound.play();
+    // Reproduir àudio
+    collectStarSound.play();
 
     // Desactivar l'arcadeSprite
     star.disableBody(true, true);
@@ -82,8 +82,7 @@ function create ()
 
     // Afegim estrelles
     stars = new Stars(this);
-
-    starSound = this.sound.add('star');
+    collectStarSound = this.sound.add('star');
 
     // 2. DEFINIM COL·LISIONS (amb els arcadePhysics!)
     // Col·lisions entre elements
