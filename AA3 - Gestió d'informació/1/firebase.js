@@ -7,12 +7,12 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/12.12.1/firebas
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBVGor-ey45_fo23G_i4TChnSaB-AoFMdo",
-    authDomain: "ranquing-basic.firebaseapp.com",
-    projectId: "ranquing-basic",
-    storageBucket: "ranquing-basic.firebasestorage.app",
-    messagingSenderId: "781197350264",
-    appId: "1:781197350264:web:793f86e46f7c109a83648d"
+    apiKey: "AIzaSyBIDRODw6cuneEul6iEl9ZW0EN2s4biflk",
+    authDomain: "ranquing-acl.firebaseapp.com",
+    projectId: "ranquing-acl",
+    storageBucket: "ranquing-acl.firebasestorage.app",
+    messagingSenderId: "964663157120",
+    appId: "1:964663157120:web:37a3dbdcaaeebc62ebe165"
 };
 
 // Initialize Firebase
