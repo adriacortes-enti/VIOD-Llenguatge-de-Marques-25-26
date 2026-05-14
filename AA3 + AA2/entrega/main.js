@@ -32,21 +32,6 @@ function hitBomb(player, bomb) {
     console.log('ouch')
 }
 
-/*
-function collectStar (player, star)
-{
-    // Reproduir àudio
-    collectStarSound.play();
-
-    // Desactivar l'arcadeSprite
-    star.disableBody(true, true);
-
-    // Actualitzar l'score
-    score += 10;
-    scoreText.setText('Score: ' + score);
-}
-*/
-
 // MÈTODES DE CONTROL DE FLUX
 // Es carreguen recursos externs (imatges, sons, etc.)
 function preload ()
@@ -82,7 +67,24 @@ function create ()
 
     // 2. DEFINIM COL·LISIONS (amb els arcadePhysics!)
     // Col·lisions entre elements
-    this.physics.add.collider(platforms);
+
+    //DESACTIVAR COLISIONS codi de stack overflow
+    this.physics.add.collider(
+        bombs.physicSpritesGroup,
+        platforms,
+        function (bomb, platform) {
+            if (!bomb.getData('hasBounced')) {
+                bomb.setData('hasBounced', true);
+                // Desactiva la colisión solo para esta bomba
+                bomb.body.checkCollision.up = false;
+                bomb.body.checkCollision.down = false;
+                bomb.body.checkCollision.left = false;
+                bomb.body.checkCollision.right = false;
+            }
+        },
+        null,
+        this
+    );
     
     // Col·lisions amb el Player
     this.physics.add.collider(player.physicsSprite, platforms);
