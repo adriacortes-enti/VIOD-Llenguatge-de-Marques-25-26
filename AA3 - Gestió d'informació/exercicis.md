@@ -33,7 +33,12 @@ c) Afegeix al document la data actual.
 
 d) Evita tenir diferents documents del mateix nom d'usuari.
 
-# Exercici 3 - TODO (actualització i esborrat de dades)
+# Exercici 3 - Actualització i esborrat de dades
+Implementa les funcions d'actualizació i esborrat de dades a Cloud Firestore sobre el projecte de l'anterior exercici.
+
+a) Investiga la funció doc() i la funció updateDoc() per a poder modificar un registre o document segons el seu ID.
+
+b) Investiga la funció doc() i la funció deleteDoc() per a poder esborrar un registre o document segons el seu ID.
 
 # Exercici 4 - Aplicació de tasques
 Investiga les funcions addDoc(), getDocs(), updateDoc() i deleteDoc() per a fer una aplicació bàsica de gestió de tasques. L'aplicació ha de poder afegir tasques, visualitzar-les, marcar-les com completades i eliminar-les.

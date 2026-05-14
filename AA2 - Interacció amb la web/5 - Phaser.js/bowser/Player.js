@@ -69,6 +69,7 @@ export default class Player {
                 
                 // sprite transparent
                 this.physicsSprite.setTint(0x888888); // fa l'sprite fosc, falta revisar com fer-la transparent
+                // this.physicsSprite.setAlpha(0.5);
 
                 this.state = 'REAPAREIXENT';
                 break;
